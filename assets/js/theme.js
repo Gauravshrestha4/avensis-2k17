@@ -1,10 +1,10 @@
 'use strict';
-var theme = function () {
+var theme = function() {
 
     // prevent empty links
     // ---------------------------------------------------------------------------------------
     function handlePreventEmptyLinks() {
-        $('a[href=#]').click(function (event) {
+        $('a[href=#]').click(function(event) {
             event.preventDefault();
         });
     }
@@ -26,10 +26,10 @@ var theme = function () {
     function handleHoverClass() {
         var hover = $('.thumbnail');
         hover.hover(
-            function () {
+            function() {
                 $(this).addClass('hover');
             },
-            function () {
+            function() {
                 $(this).removeClass('hover');
             }
         );
@@ -43,8 +43,8 @@ var theme = function () {
             $('body').scrollspy('refresh');
         });
         // fixed menu toggle
-        $('.menu-toggle').on('click', function(){
-            if($('.navigation').hasClass('opened')) {
+        $('.menu-toggle').on('click', function() {
+            if ($('.navigation').hasClass('opened')) {
                 $(this).find('.fa').removeClass('fa-times').addClass('fa-bars');
                 $('.navigation').removeClass('opened').addClass('closed');
             } else {
@@ -53,7 +53,7 @@ var theme = function () {
             }
         });
         // submenu fix
-        $('.mobile-submenu').click(function () {
+        $('.mobile-submenu').click(function() {
             $(this).parent().toggleClass('mobile-submenu-open');
         });
         $('ul.sf-menu a').click(function() {
@@ -63,8 +63,8 @@ var theme = function () {
 
     // Smooth scrolling
     // ---------------------------------------------------------------------------------------
-    function handleSmoothScroll(){
-        $('.sf-menu a, .scroll-to').click(function () {
+    function handleSmoothScroll() {
+        $('.sf-menu a, .scroll-to').click(function() {
 
             //var headerH = $('header').outerHeight();
             var headerH = 0;
@@ -91,15 +91,15 @@ var theme = function () {
     // Scroll totop button
     // ---------------------------------------------------------------------------------------
     function handleToTopButton() {
-        $(window).scroll(function () {
+        $(window).scroll(function() {
             if ($(this).scrollTop() > 1) {
-                $('.to-top').css({bottom: '15px'});
+                $('.to-top').css({ bottom: '15px' });
             } else {
-                $('.to-top').css({bottom: '-100px'});
+                $('.to-top').css({ bottom: '-100px' });
             }
         });
-        $('.to-top').click(function () {
-            $('html, body').animate({scrollTop: '0px'}, 800);
+        $('.to-top').click(function() {
+            $('html, body').animate({ scrollTop: '0px' }, 800);
             return false;
         });
     }
@@ -115,6 +115,7 @@ var theme = function () {
     // ---------------------------------------------------------------------------------------
     function handleAnimatedHeader() {
         var header = $('.header.fixed');
+
         function refresh() {
             var scroll = $(window).scrollTop();
             if (scroll >= 99) {
@@ -123,21 +124,21 @@ var theme = function () {
                 header.removeClass('shrink');
             }
         };
-        $(window).load(function () { refresh(); });
-        $(window).scroll(function () { refresh(); });
-        $(window).on('touchstart',function(){ refresh(); });
-        $(window).on('scrollstart',function(){ refresh(); });
-        $(window).on('scrollstop',function(){ refresh(); });
-        $(window).on('touchmove',function(){ refresh(); });
+        $(window).load(function() { refresh(); });
+        $(window).scroll(function() { refresh(); });
+        $(window).on('touchstart', function() { refresh(); });
+        $(window).on('scrollstart', function() { refresh(); });
+        $(window).on('scrollstop', function() { refresh(); });
+        $(window).on('touchmove', function() { refresh(); });
 
     }
 
     // handleTabsFAQ
     // ---------------------------------------------------------------------------------------
     function handleTabsFAQ() {
-        if($('#tabs-faq').length){
+        if ($('#tabs-faq').length) {
             var tabs = $('#tabs-faq');
-            tabs.find('a').on('click', function () {
+            tabs.find('a').on('click', function() {
                 tabs.find('.fa-angle-right').removeClass('fa-angle-right').addClass('fa-plus');
                 $(this).find('.fa').removeClass('fa-plus').addClass('fa-angle-right');
             });
@@ -148,17 +149,16 @@ var theme = function () {
     // ---------------------------------------------------------------------------------------
     function resizePage() {
         if ($('body').hasClass('boxed')) {
-            $('#main-slider').find('.page').each(function () {
+            $('#main-slider').find('.page').each(function() {
                 $(this).removeAttr('style');
             });
         }
         if ($('body').hasClass('coming-soon')) {
-            $('#main-slider').find('.page').each(function () {
+            $('#main-slider').find('.page').each(function() {
                 $(this).removeAttr('style');
                 $('.page').css('min-height', $(window).height());
             });
-        }
-        else {
+        } else {
             $('.page').css('min-height', $(window).height());
         }
         $('#main-slider').trigger('refresh');
@@ -172,7 +172,7 @@ var theme = function () {
         onResize: function() {
             resizePage();
         },
-        init: function () {
+        init: function() {
             handlePreventEmptyLinks();
             handlePlaceholdem();
             handleBootstrapSelect();
@@ -185,7 +185,7 @@ var theme = function () {
             handleTabsFAQ();
         },
         // Main Slider
-        initMainSlider: function () {
+        initMainSlider: function() {
             $('#main-slider').owlCarousel({
                 //items: 1,
                 autoplay: true,
@@ -200,24 +200,29 @@ var theme = function () {
                 ],
                 responsiveRefreshRate: 100,
                 responsive: {
-                    0:    {items: 1},
-                    479:  {items: 1},
-                    768:  {items: 1},
-                    991:  {items: 1},
-                    1024: {items: 1}
+                    0: { items: 1 },
+                    479: { items: 1 },
+                    768: { items: 1 },
+                    991: { items: 1 },
+                    1024: { items: 1 }
                 }
             });
 
         },
         // CountDown
-        initCountDown: function () {
+        initCountDown: function() {
             var austDay = new Date();
+<<<<<<< HEAD
             austDay = new Date(austDay.getFullYear() + 1, 1 - 1, 11);
             $('#defaultCountdown').countdown({until: austDay});
+=======
+            austDay = new Date(austDay.getFullYear() + 1, 1 - 1, 26);
+            $('#defaultCountdown').countdown({ until: austDay });
+>>>>>>> f809ec02978aca32f56f003fac193e30d231bfc4
             $('#year').text(austDay.getFullYear());
         },
         // Partners Slider
-        initPartnerSlider: function () {
+        initPartnerSlider: function() {
             $('.partners-carousel .owl-carousel').owlCarousel({
                 autoplay: true,
                 loop: true,
@@ -229,16 +234,16 @@ var theme = function () {
                     "<i class='fa fa-caret-right'></i>"
                 ],
                 responsive: {
-                    0:    {items: 1},
-                    479:  {items: 2},
-                    768:  {items: 3},
-                    991:  {items: 5},
-                    1024: {items: 6}
+                    0: { items: 1 },
+                    479: { items: 2 },
+                    768: { items: 3 },
+                    991: { items: 5 },
+                    1024: { items: 6 }
                 }
             });
         },
         // Partners Slider
-        initEventCarousel: function () {
+        initEventCarousel: function() {
             $('.event-carousel .owl-carousel').owlCarousel({
                 autoplay: false,
                 loop: false,
@@ -250,16 +255,16 @@ var theme = function () {
                     "<i class='fa fa-caret-right'></i>"
                 ],
                 responsive: {
-                    0:    {items: 1},
-                    479:  {items: 1},
-                    768:  {items: 2},
-                    991:  {items: 3},
-                    1024: {items: 4}
+                    0: { items: 1 },
+                    479: { items: 1 },
+                    768: { items: 2 },
+                    991: { items: 3 },
+                    1024: { items: 4 }
                 }
             });
         },
         // Testimonials
-        initTestimonials: function () {
+        initTestimonials: function() {
             $('#testimonials').owlCarousel({
                 items: 1,
                 autoplay: true,
@@ -273,17 +278,17 @@ var theme = function () {
             });
         },
         // Animation on Scroll
-        initAnimation: function () {
+        initAnimation: function() {
             var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
             if (isMobile == false) {
                 $('*[data-animation]').addClass('animated');
-                $('.animated').waypoint(function (down) {
+                $('.animated').waypoint(function(down) {
                     var elem = $(this);
                     var animation = elem.data('animation');
                     if (!elem.hasClass('visible')) {
                         var animationDelay = elem.data('animation-delay');
                         if (animationDelay) {
-                            setTimeout(function () {
+                            setTimeout(function() {
                                 elem.addClass(animation + ' visible');
                             }, animationDelay);
                         } else {
@@ -292,13 +297,40 @@ var theme = function () {
                     }
                 }, {
                     offset: $.waypoints('viewportHeight')
-                    //offset: 'bottom-in-view'
-                    //offset: '95%'
+                        //offset: 'bottom-in-view'
+                        //offset: '95%'
                 });
             }
             // Refresh Waypoints on tab click / animation
+<<<<<<< HEAD
             $('#tabs-lv1 li a[data-toggle="tab"]').on('shown.bs.tab', function () { $.waypoints('refresh'); });
             $('#tabs-lv2 li a[data-toggle="tab"]').on('shown.bs.tab', function () { $.waypoints('refresh'); });
+=======
+            $('#tabs-lv1 li a[data-toggle="tab"]').on('shown.bs.tab', function() { $.waypoints('refresh'); });
+            $('#tabs-lv2 li a[data-toggle="tab"]').on('shown.bs.tab', function() { $.waypoints('refresh'); });
+        },
+        // Google map
+        initGoogleMap: function() {
+            var map;
+            var marker;
+            var image = 'assets/img/icon-google-map.png'; // marker icon
+            function initialize() {
+                var mapOptions = {
+                    scrollwheel: false,
+                    zoom: 12,
+                    center: new google.maps.LatLng(40.9807648, 28.9866516) // map coordinates
+                };
+                map = new google.maps.Map(document.getElementById('map-canvas'),
+                    mapOptions);
+                marker = new google.maps.Marker({
+                    position: new google.maps.LatLng(41.0096559, 28.9755535), // marker coordinates
+                    map: map,
+                    icon: image,
+                    title: 'Hello World!'
+                });
+            }
+            google.maps.event.addDomListener(window, 'load', initialize);
+>>>>>>> f809ec02978aca32f56f003fac193e30d231bfc4
         }
         
 
