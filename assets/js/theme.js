@@ -212,13 +212,10 @@ var theme = function() {
         // CountDown
         initCountDown: function() {
             var austDay = new Date();
-<<<<<<< HEAD
-            austDay = new Date(austDay.getFullYear() + 1, 1 - 1, 11);
-            $('#defaultCountdown').countdown({until: austDay});
-=======
+
             austDay = new Date(austDay.getFullYear() + 1, 1 - 1, 26);
             $('#defaultCountdown').countdown({ until: austDay });
->>>>>>> f809ec02978aca32f56f003fac193e30d231bfc4
+
             $('#year').text(austDay.getFullYear());
         },
         // Partners Slider
@@ -302,36 +299,9 @@ var theme = function() {
                 });
             }
             // Refresh Waypoints on tab click / animation
-<<<<<<< HEAD
             $('#tabs-lv1 li a[data-toggle="tab"]').on('shown.bs.tab', function () { $.waypoints('refresh'); });
             $('#tabs-lv2 li a[data-toggle="tab"]').on('shown.bs.tab', function () { $.waypoints('refresh'); });
-=======
-            $('#tabs-lv1 li a[data-toggle="tab"]').on('shown.bs.tab', function() { $.waypoints('refresh'); });
-            $('#tabs-lv2 li a[data-toggle="tab"]').on('shown.bs.tab', function() { $.waypoints('refresh'); });
-        },
-        // Google map
-        initGoogleMap: function() {
-            var map;
-            var marker;
-            var image = 'assets/img/icon-google-map.png'; // marker icon
-            function initialize() {
-                var mapOptions = {
-                    scrollwheel: false,
-                    zoom: 12,
-                    center: new google.maps.LatLng(40.9807648, 28.9866516) // map coordinates
-                };
-                map = new google.maps.Map(document.getElementById('map-canvas'),
-                    mapOptions);
-                marker = new google.maps.Marker({
-                    position: new google.maps.LatLng(41.0096559, 28.9755535), // marker coordinates
-                    map: map,
-                    icon: image,
-                    title: 'Hello World!'
-                });
-            }
-            google.maps.event.addDomListener(window, 'load', initialize);
->>>>>>> f809ec02978aca32f56f003fac193e30d231bfc4
-        }
+    }
         
 
     };
