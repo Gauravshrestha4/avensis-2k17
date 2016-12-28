@@ -242,7 +242,7 @@ body.boxed {
 }
 .wide .page-section.color,
 .boxed .page-section.color > .container {
-    background-color: #dc143c;
+    background-color: #212121;
     color: #ffffff;
 }
 .wide .page-section.image,
@@ -270,14 +270,17 @@ body.boxed {
 .page-section.background-img-slider {position: relative;}
 .wide .page-section.background-img-slider,
 .boxed .page-section.background-img-slider > .container {
-    background: transparent url("../img/cover.jpg") 50% 0 repeat !important;
+    height: 100%;
+    background: transparent url("../img/cover.jpg") 50% 0 no-repeat !important;
     background-position: 50% 0 !important;
+    background-attachment: fixed;
     background-size: cover !important;
 }
 .wide .page-section.background-img-slider > .container {
     width: 100%;
-    padding-left: 0;
+    padding-left: 0
     padding-right: 0;
+    min-height: 800px;
 }
 .boxed .page-section.background-img-slider > .container {
     padding: 0 !important;
@@ -678,7 +681,16 @@ p.btn-row .btn {margin-top: 10px; margin-right: 10px;}
 
 /* 1.7 - Form / Input / Textarea / Select
 /* ========================================================================== */
+#team{
+    background: url("../img/meet_our_team.jpg") no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+#aboutUs{
+    background: url("../img/msit.jpg") no-repeat;
+    background-size: cover;
 
+}
 .form-control {
     height: 60px;
     padding-left: 20px;
@@ -1203,7 +1215,7 @@ textarea {
     clear: both;
     display: inline-block;
     text-transform: uppercase;
-    margin:-180px 0 0 0;
+    margin:0 0 0 0 0;
 
     display: block;
     position: relative;
@@ -1337,15 +1349,17 @@ textarea {
 .defaultCountdown {
     background-color: transparent;
     border-color: transparent;
+    position: relative;
+    top: 450px;
 }
 .countdown-amount {
     font-family: 'Raleway', sans-serif;
-    font-size: 65px;
+    font-size: 30px;
     font-weight: 900;
     color: #ffffff;
     text-shadow: 1px 1px #000000;
     text-transform: uppercase;
-    margin: 30px 0 0 0;
+    margin: 10px 0 0 0;
 }
 .countdown-period {
     font-family: 'Roboto Slab', serif;
@@ -2231,13 +2245,25 @@ footer.post-meta .post-categories {display: block;}
 /* Caption elements
  * -------------------------------------------------------------------------- */
 
-.caption-title {
-    font-size: 18px;
+.caption-title-up {
+    font-size: 70px;
+    font-weight: 700;
+    line-height: 24px;
+    text-transform: uppercase;
+    margin: 150px 0 0 0;
+    color: #fff;
+    text-align: center;
+}
+.caption-title-down {
+    font-size: 70px;
     font-weight: 700;
     line-height: 24px;
     text-transform: uppercase;
     margin: 0 0 0 0;
-    color: #0d1d31;
+    position: relative;
+    top: 450px;
+    color: #fff;
+    text-align: center;
 }
 .hovered .caption-title {color: #ffffff;}
 .caption-buttons {margin-bottom: 0;}
@@ -2414,8 +2440,8 @@ footer.post-meta .post-categories {display: block;}
 .wide .footer-meta,
 .boxed .footer-meta > .container {
     padding: 40px 0 40px 0;
-    background-color: #f5f5f5;
-    color: #414650;
+    background-color:#424242;
+    color: #fff;
     font-size: 18px;
 }
 
