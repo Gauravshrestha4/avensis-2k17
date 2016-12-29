@@ -203,6 +203,7 @@ body.boxed {
 }
 .container {
     overflow-x: hidden !important;
+    overflow-y: hidden !important;
 }
 .wide .container.full-width {
     width: 100%;
