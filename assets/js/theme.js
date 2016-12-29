@@ -225,6 +225,7 @@ var theme = function() {
                 loop: true,
                 margin: 25,
                 dots: false,
+                autplaySpeed: 500,
                 nav: true,
                 navText: [
                     "<i class='fa fa-caret-left'></i>",
@@ -245,6 +246,7 @@ var theme = function() {
                 autoplay: false,
                 loop: false,
                 margin: 25,
+                autplaySpeed: 500,
                 dots: true,
                 nav: true,
                 navText: [
