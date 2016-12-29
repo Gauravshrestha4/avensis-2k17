@@ -201,7 +201,9 @@ body.boxed {
 .footer .widget + .widget {
     margin-top: 50px;
 }
-.container {}
+.container {
+    overflow-x: hidden !important;
+}
 .wide .container.full-width {
     width: 100%;
     max-width: 100%;
