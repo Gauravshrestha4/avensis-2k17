@@ -1,0 +1,4 @@
+1) Optimize website as much as possible
+2) Place content instead of placeholder
+3) Take care of color scheme
+4) Finish home section
