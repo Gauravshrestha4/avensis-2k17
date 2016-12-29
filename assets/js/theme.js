@@ -118,7 +118,7 @@ var theme = function() {
 
         function refresh() {
             var scroll = $(window).scrollTop();
-            if (scroll >= 99) {
+            if (scroll >= 700) {
                 header.addClass('shrink');
             } else {
                 header.removeClass('shrink');

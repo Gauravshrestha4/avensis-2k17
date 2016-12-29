@@ -271,6 +271,7 @@ body.boxed {
 .wide .page-section.background-img-slider,
 .boxed .page-section.background-img-slider > .container {
     height: 100%;
+    width: 100%;
     background: transparent url("../img/cover.jpg") 50% 0 no-repeat !important;
     background-position: 50% 0 !important;
     background-attachment: fixed;
@@ -284,6 +285,27 @@ body.boxed {
 }
 .boxed .page-section.background-img-slider > .container {
     padding: 0 !important;
+}
+@media(max-width: 768px){
+   .page-section.background-img-slider {position: relative;}
+.wide .page-section.background-img-slider,
+.boxed .page-section.background-img-slider > .container {
+    height: 100%;
+    width: 100%;
+    background: transparent url("../img/001.jpg") 50% 0 no-repeat !important;
+    background-position: 50% 0 !important;
+    background-attachment: fixed;
+    background-size: cover !important;
+}
+.wide .page-section.background-img-slider > .container {
+    width: 100%;
+    padding-left: 0
+    padding-right: 0;
+    min-height: 700px;
+}
+.boxed .page-section.background-img-slider > .container {
+    padding: 0 !important;
+} 
 }
 .page-section.no-padding {padding: 0;}
 .page-section.no-padding-top {padding-top: 0;}
@@ -686,7 +708,7 @@ p.btn-row .btn {margin-top: 10px; margin-right: 10px;}
     background-attachment: fixed;
     background-size: cover;
 }
-#aboutUs{
+#contactUs{
     background: url("../img/msit.jpg") no-repeat;
     background-size: cover;
 
@@ -761,13 +783,13 @@ textarea {
 
 .wide .header,
 .boxed .header > .container {
-    background-color: transparent;
+    background-color: black;
     position: relative;
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 .sub-page .header {
-    background-color: rgba(129, 134, 140, 1);
+    background-color:#212121 ;
 }
 .header.header-mp {
     padding-top: 30px;
@@ -780,15 +802,15 @@ textarea {
     z-index: 10;
 }
 .header.shrink-off {
-    padding-top: 2px;
-    padding-bottom: 2px;
+    padding-top: 5px;
+    padding-bottom: 5px;
     /*background-image: linear-gradient(rgba(129, 134, 140, 1), rgba(129, 134, 140, .0));*/
     background-color: rgba(129, 134, 140, .8);
 }
 .wide .header.shrink,
 .boxed .header.shrink > .container {
-    padding-top: 2px;
-    padding-bottom: 2px;
+    padding-top: 5px;
+    padding-bottom: 5px;
     background-color: rgba(129, 134, 140, .8);
 }
 .header .header-wrapper {
@@ -875,6 +897,7 @@ textarea {
     height: 15px;
     border-radius: 1px;
 }
+
 
 /* 2.3 - Navigation / superfish skin
 /* ========================================================================== */
@@ -2261,7 +2284,7 @@ footer.post-meta .post-categories {display: block;}
     text-transform: uppercase;
     margin: 0 0 0 0;
     position: relative;
-    top: 450px;
+    top: 420px;
     color: #fff;
     text-align: center;
 }
@@ -2371,7 +2394,7 @@ footer.post-meta .post-categories {display: block;}
     width: 165px;
     margin: 0 auto;
 }
-.hex .hex-inner {
+/*.hex .hex-inner {
     margin: 0 auto;
     height: 190px; width: 170px;
     text-align: center;
@@ -2380,8 +2403,8 @@ footer.post-meta .post-categories {display: block;}
     -o-transform: none;
     -ms-transform: none;
     transform: none;
-}
-.hex-deg {
+}*/
+/*.hex-deg {
     overflow: hidden;
     width: 100%; height: 100%;
     -webkit-transform: rotate(120deg);
@@ -2399,14 +2422,14 @@ footer.post-meta .post-categories {display: block;}
     transform: rotate(-60deg);
 }
 .hex-deg .hex-deg .hex-deg {}
-
+*/
 .hex.testimonial-avatar {width: 100px;}
-.hex.testimonial-avatar .hex-inner {height: 115px; width: 100px;}
-.wohexagon.testimonial-avatar {width: 100px; border-radius: 10px; overflow: hidden;}
+/*.hex.testimonial-avatar .hex-inner {height: 115px; width: 100px;}
+*/.wohexagon.testimonial-avatar {width: 100px; border-radius: 10px; overflow: hidden;}
 .wohexagon.testimonial-avatar .wohexagon-inner {height: 115px; width: 100px;}
 .hex.speaker-avatar {}
-.hex.speaker-avatar .hex-inner {}
-
+/*.hex.speaker-avatar .hex-inner {}
+*/
 /* CIRCLE */
 
 .circle {
@@ -2984,15 +3007,15 @@ div.pp_overlay {
     background-color: #373737;
     color: #9f9197;
     z-index: 9999;
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     border-radius: 20px;
     font-size: 25px;
     line-height: 35px;
     text-align: center;
     position: fixed;
     bottom: -100px;
-    left: 50%;
+    left: 95%;
     margin-left: -20px;
     cursor: pointer;
     overflow: hidden;
