@@ -3015,7 +3015,7 @@ div.pp_overlay {
     text-align: center;
     position: fixed;
     bottom: -100px;
-    left: 95%;
+    left: 50%;
     margin-left: -20px;
     cursor: pointer;
     overflow: hidden;
