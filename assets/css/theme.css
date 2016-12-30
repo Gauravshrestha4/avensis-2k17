@@ -339,6 +339,7 @@ body.boxed {
 }
 .container {
     overflow-x: hidden !important;
+    overflow-y: hidden !important;
 }
 .page-section.no-padding {padding: 0;}
 .page-section.no-padding-top {padding-top: 0;}
