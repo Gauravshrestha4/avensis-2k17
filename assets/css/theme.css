@@ -286,6 +286,20 @@ body.boxed {
 .boxed .page-section.background-img-slider > .container {
     padding: 0 !important;
 }
+.overlay {
+    background:linear-gradient(to bottom, rgba(0,0,0,0.8) 0%,rgba(0,0,0,0.73) 17%,rgba(0,0,0,0.66) 35%,rgba(0,0,0,0.55) 62%,rgba(0,0,0,0.4) 100%);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.729412) 17%, rgba(0, 0, 0, 0.658824) 35%, rgba(0, 0, 0, 0.54902) 62%, rgba(0, 0, 0, 0.4) 100%);
+    background-position-x: initial;
+    background-position-y: initial;
+    background-size: initial;
+    background-repeat-x: initial;
+    background-repeat-y: initial;
+    background-attachment: fixed;
+    background-origin: initial;
+    background-clip: initial;
+    background-color: initial;
+
+}
 
 @media(max-width: 768px){
 
@@ -309,7 +323,7 @@ body.boxed {
     font-size: 60px !important;
     position: relative;
     top: 100px !important;
-    color: #e53935 !important;
+    color: #fff !important;
 
 }
 .hovered .caption-title {color: #ffffff;}
@@ -323,7 +337,8 @@ body.boxed {
 .boxed .page-section.background-img-slider > .container {
     height: 100%;
     width: 100%;
-    background: transparent url("../img/001.jpg") 50% 0 no-repeat !important;
+    background-color: black !important;
+    background: none !important;
     background-position: 50% 0 !important;
     background-size: cover !important;
 }
@@ -957,7 +972,7 @@ textarea {
 
 .sf-menu {margin-right: -1em; font-size: 14px; font-weight: 300; text-transform: uppercase;}
 .sf-menu.nav > li > a:hover, /* bs3 reset */
-.sf-menu.nav > li > a:focus /* bs3 reset */ {background-color: transparent;}
+.sf-menu.nav > li > a:focus /* bs3 reset */ {background-color: transparent;color: #e53935;}
 .sf-menu.nav > li > a, /*bs3 reset */ .sf-menu a {padding: 10px 15px;}
 
 .sf-menu a {color: #ffffff;}
@@ -1005,6 +1020,7 @@ textarea {
     border-left-color: #e53935 ;
 }
 
+
 /* 2.4 - Fixed menu
 /* ========================================================================== */
 
@@ -1045,7 +1061,12 @@ textarea {
 .header-mp .menu-toggle{
     top: 33px;
 }
-
+.caption-title-up:hover{
+    color:  #e53935;
+}
+.caption-title-down:hover{
+    color:  #e53935;
+}
 /* 2.5 - Mobile menu
 /* ========================================================================== */
 
