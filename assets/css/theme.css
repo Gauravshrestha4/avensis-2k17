@@ -738,7 +738,7 @@ p.btn-row .btn {margin-top: 10px; margin-right: 10px;}
 /* 1.7 - Form / Input / Textarea / Select
 /* ========================================================================== */
 #team{
-    background: url("../img/meet_our_team.jpg") no-repeat;
+    
     background-attachment: fixed;
     background-size: cover;
 }
