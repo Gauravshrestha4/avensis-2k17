@@ -242,7 +242,7 @@ body.boxed {
 }
 .wide .page-section.color,
 .boxed .page-section.color > .container {
-    background-color: #212121;
+    background-color: #424242;
     color: #ffffff;
 }
 .wide .page-section.image,
@@ -1408,6 +1408,12 @@ textarea {
 /*video css strats*/
 .video-warp{
     width: 100%;
+}
+#sponsors{
+    background:url('../img/sponsors.jpg') no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+
 }
 #bgvid {
     position: absolute;

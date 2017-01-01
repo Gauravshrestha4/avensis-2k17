@@ -29,12 +29,16 @@
   visibility: visible;
   outline: 1px solid transparent;  /* fix for jagged edges in FF on hover transition */
 }
-
+.fa-stac{
+  font-size: 18em;
+  padding-top: 20px;
+}
 .hexIn {
   display: block;
   width: 100%;
   height: 100%;
   text-align: center;
+  background-color: black;
   color: #fff;
   overflow: hidden;
   transform: skewY(-30deg) rotate(60deg);

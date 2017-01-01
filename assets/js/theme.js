@@ -213,7 +213,7 @@ var theme = function() {
         initCountDown: function() {
             var austDay = new Date();
 
-            austDay = new Date(austDay.getFullYear() + 1, 1 - 1, 11);
+            austDay = new Date(austDay.getFullYear() + 1, 1 - 1, 11-365);
             $('#defaultCountdown').countdown({ until: austDay });
 
             $('#year').text(austDay.getFullYear());
