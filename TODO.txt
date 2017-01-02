@@ -1,1 +1,3 @@
 1) Create proper Modal for Robotics section
+2. add location and date for mobile
+3.directros and conveners image
