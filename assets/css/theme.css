@@ -3674,3 +3674,10 @@ body.rtl .pagination > li > a {margin: 0 0 0 10px;}
     body.rtl .navigation.closed .menu-toggle {right: auto; left: 15px;}
     body.rtl .navigation.opened .menu-toggle {right: auto; left: 15px;}
 }
+
+/*modal card*/
+
+.modal-card {
+    /*display: inline-flex;*/
+    margin: 10px;
+}
